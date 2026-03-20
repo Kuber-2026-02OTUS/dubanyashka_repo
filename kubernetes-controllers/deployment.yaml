@@ -18,7 +18,7 @@ spec:
         app: homework
     spec:
       nodeSelector:
-        app: homework
+        homework: "true"
       containers:
       - name: server
         image: python:3.10.20-alpine3.22
