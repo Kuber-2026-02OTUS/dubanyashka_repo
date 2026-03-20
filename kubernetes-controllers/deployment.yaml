@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webserver-pod
-  labels:
   namespace: homework
 spec:
   replicas: 3
