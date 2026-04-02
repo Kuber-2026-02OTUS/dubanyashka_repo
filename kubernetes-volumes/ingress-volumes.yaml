@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metagata:
+    name: nginx-ingress-volumes
+    namespace: homework
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: homework.otus
+      http:
+        paths:
+          - path: /conf/(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: webserver-service
+                port:
+                  number: 80
