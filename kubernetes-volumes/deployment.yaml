@@ -54,4 +54,4 @@ spec:
           claimName: webserver-pvc 
       - name: config
         configMap:
-          name: game-demo
+          name: webserver-cm
