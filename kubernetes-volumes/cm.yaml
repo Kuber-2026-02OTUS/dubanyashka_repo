@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: webserver-cm
+    namespace: homework
+data:
+  tag: "homework"
+  number: "4"
+  topic: "volumes"
+  file.cnf:
+    |
+      stage: dev
+      revision: 1.0.1-beta
+      application: python-webserver 
