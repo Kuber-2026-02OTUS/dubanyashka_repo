@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: monitoring-clb
+subjects:
+- kind: ServiceAccount  
+  name: monitoring
+namespace: homework   
+roleRef:
+  kind: ClusterRole
+  name: monitoring-cr
+  apiGroup: rbac.authorization.k8s.io
